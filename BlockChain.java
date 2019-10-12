@@ -1,10 +1,6 @@
-package com.Abhilash.Blockchain_Project;
 import java.util.ArrayList;
-//import java.util.Scanner;
 import java.util.List;
 import com.google.gson.GsonBuilder;
-//import java.util.concurrent.TimeUnit;
-//import com.google.gson.Gson;
 
 public class BlockChain {
 		public static List<Block> chain;
@@ -60,9 +56,9 @@ public class BlockChain {
 	    	System.out.println(blockchain.size());
 	    	if(blockchain.size() > 0) {
 		    		Block blockToBeCorrupted = blockchain.get(blockNumber - 1);
-		    		Block Blk = new Block(blockToBeCorrupted.difficulty,amt,blockToBeCorrupted.sender,blockToBeCorrupted.recipient,blockToBeCorrupted.previousHash);
-		    		Blk.mineBlock(blockToBeCorrupted.difficulty);
-		    		blockchain.set(blockNumber - 1, Blk);
+				blockToBeCorrupted.data = amt;
+		    		blockToBeCorrupted.mineBlock(blockToBeCorrupted.difficulty);
+		    		blockchain.set(blockNumber - 1, blockToBeCorrupted);
 	    	} else {
 	    		System.out.println("Array does'nt contain enough elements to perform this operation.");
 	    	}
