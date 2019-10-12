@@ -3,15 +3,15 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class Block {
-	public int index;
+    public int index;
     public String hash;
     public String previousHash;
-    private String data;
+    public String data;
     private String timeStamp;
     public String sender;
     public String recipient;
-	public int difficulty;
-	private int nonce;
+    public int difficulty;
+    private int nonce;
 
     // Block Constructor.
     public Block(int difficulty, String data, String sender, String recipient,String previousHash) {
