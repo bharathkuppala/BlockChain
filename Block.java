@@ -51,11 +51,12 @@ public class Block {
     	return this.hash;
     }
     
-    public void reMineBlock(int difficulty) {
-    	String target = new String(new char[difficulty]).replace('\0', '0');
-    	while(!this.hash.substring(0,difficulty).equals(target)) {
-    		this.nonce++;
-    		this.hash = this.calculateHash();
-    	}
-    }
+//     public void reMineBlock(int difficulty) {
+//         this.hash = ""
+//     	String target = new String(new char[difficulty]).replace('\0', '0');
+//     	while(!this.hash.substring(0,difficulty).equals(target)) {
+//     		this.nonce++;
+//     		this.hash = this.calculateHash();
+//     	}
+//     }
 }
