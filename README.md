@@ -1,2 +1,2 @@
 # BlockChain
-Implementation of different methods in Blockchain using java
+Blockchain Implementation using java
